@@ -1,0 +1,29 @@
+package com.yamuna;
+
+public class Employee {
+
+    String name;
+    int age;
+    String city;
+
+    public void display () {
+
+        System.out.println("The name is " + name);
+        System.out.println("The age is " + age);
+        System.out.println("The city is " + city);
+    }
+
+        public static void main(String[] args) {
+
+            Employee e1 = new Employee();
+            e1.name="abc";
+            e1.age=20;
+            e1.city="chennai";
+            e1.display();
+            Employee e2 = new Employee();
+            e2.name="xyz";
+            e2.age=25;
+            e2.city="Mumbai";
+            e2.display();
+        }
+}
