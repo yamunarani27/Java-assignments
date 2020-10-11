@@ -1,0 +1,85 @@
+Question 1:Get marks of 5 subjects,calculate percentage,display percentage and grade
+
+
+
+import java.util.Scanner;
+
+public class Grade {
+
+    public static void main(String[] args) {
+
+        double percentage;
+        int total;
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the marks");
+        int mark1=sc.nextInt();
+        int mark2=sc.nextInt();
+        int mark3=sc.nextInt();
+        int mark4=sc.nextInt();
+        int mark5=sc.nextInt();
+        total=mark1+mark2+mark3+mark4+mark5;
+
+        percentage=(total*100)/500;
+
+        if(percentage>=90) {
+            System.out.println("percentage is " + percentage + " and grade is A");
+        }
+        else if (percentage>=75 && percentage<90){
+            System.out.println("percentage is " + percentage + " and grade is B");
+        }
+        else if (percentage>=50 && percentage<75){
+            System.out.println("percentage is " + percentage + " and grade is C");
+        }
+        else {
+            System.out.println("percentage is " + percentage + " and grade is D");
+        }
+
+
+    }
+}
+
+Question 2: Get employee name ,birthyear and monthly_salary ,calculate the tax based on the income,display 
+           name,age,annual_salary and the tax amount.
+           
+           import java.util.Scanner;
+
+public class Tax {
+
+
+    public static void main(String[] args) {
+
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter your name");
+        String name=sc.next();
+        System.out.println("Enter your birth_year");
+        int birth_year=sc.nextInt();
+        System.out.println("Enter your monthly_salary");
+        int monthly_salary=sc.nextInt();
+
+        int age=2020-birth_year;
+        int annual_salary=monthly_salary*12;
+
+        System.out.println("name is "+name);
+        System.out.println("age is "+age);
+        System.out.println("annual_salary "+annual_salary);
+        float tax;
+
+        if(annual_salary>=500000) {
+            tax=(annual_salary*20)/100;
+        }
+        else if(annual_salary>=400000){
+            tax=(annual_salary*15)/100;
+        }
+        else if(annual_salary>=300000){
+            tax=(annual_salary*10)/100;
+        }
+        else if(annual_salary>=200000){
+            tax=(annual_salary*5)/100;
+        }
+        else{
+            tax=0;
+        }
+        System.out.println("The tax amount is "+tax);
+    }
+}
+
