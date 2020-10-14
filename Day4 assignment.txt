@@ -1,0 +1,94 @@
+Question 1:create a class avenger with properties 
+          (name,age,power,weapon,planet) and with 
+          function-getDetails() and displayDetails().
+          create 5 objects as an array in the main method and call.           
+
+import java.util.Scanner;
+
+public class Avenger {
+    public String name;
+    public int age;
+    public String power;
+    public String weapon;
+    public String planet;
+
+    Scanner sc=new Scanner(System.in);
+
+    public void getDetails(){
+        System.out.println("Enter name: ");
+        name=sc.next();
+        System.out.println("Enter age: ");
+        age=sc.nextInt();
+        System.out.println("Enter power: ");
+        power=sc.next();
+        System.out.println("Enter weapon: ");
+        weapon=sc.next();
+        System.out.println("Enter planet: ");
+        planet=sc.next();
+    }
+
+    public void displayDetails(){
+        System.out.println("Avenger name "+name+" age "+age+" power "+power+" weapon "+weapon+" planet "+planet);
+    }
+
+    public static void main(String[] args) {
+
+        Avenger[] avengers = new Avenger[5];
+
+        for (int i = 0; i < 5; i++) {
+            avengers[i]=new Avenger();
+            avengers[i].getDetails();
+        }
+
+        for (int i = 0; i < 5; i++) {
+
+            avengers[i].displayDetails();
+        }
+
+    }
+
+}
+
+
+Question 2:create an int array with 5 values and print only the odd values.
+
+import java.util.Scanner;
+
+public class Main {
+
+
+    public static void main(String[] args) {
+        int[] arr=new int[5];
+        Scanner obj=new Scanner(System.in);
+        for(int i=0;i<5;i++){
+            System.out.println("enter the number");
+            arr[i]=obj.nextInt();
+        }
+        for(int i=0;i<5;i++) {
+            if (arr[i] % 2 != 0) {
+                System.out.println(arr[i]);
+            }
+        }
+    }
+}
+
+Question 3:create an int array of size 5,take all the values from the user,all the values and print the sum.
+
+
+import java.util.Scanner;
+
+public class Main {
+
+
+    public static void main(String[] args) {
+        int[] arr=new int[5];
+        int result=0;
+        Scanner obj=new Scanner(System.in);
+        for(int i=0;i<5;i++){
+            System.out.println("enter the number");
+            arr[i]=obj.nextInt();
+            result=result+arr[i];
+        }
+        System.out.println("sum of array values  is "+result);
+        }
+    }
